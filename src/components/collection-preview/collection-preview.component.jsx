@@ -7,9 +7,9 @@ import {
 } from "./collection-preview.styles";
 
 const CollectionPreview = ({ title, items }) => (
-  <CollectionPreviewContainer className="collection-preview">
-    <TitleContainer className="title">{title.toUpperCase()}</TitleContainer>
-    <PreviewContainer className="preview">
+  <CollectionPreviewContainer>
+    <TitleContainer>{title.toUpperCase()}</TitleContainer>
+    <PreviewContainer>
       {items
         .filter((item, idx) => idx < 4)
         .map((item) => (
