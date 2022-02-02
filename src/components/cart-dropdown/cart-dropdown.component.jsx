@@ -13,16 +13,14 @@ import {
 } from "./cart-dropdown.styles";
 
 const CartDropdown = ({ cartItems, history, dispatch }) => (
-  <CartDropdownContainer className="cart-dropdown">
-    <CartItemsContainer className="cart-items">
+  <CartDropdownContainer>
+    <CartItemsContainer>
       {cartItems.length ? (
         cartItems.map((cartItem) => (
           <CartItem key={cartItem.id} item={cartItem} />
         ))
       ) : (
-        <EmptyMessage className="empty-message">
-          Your cart is empty
-        </EmptyMessage>
+        <EmptyMessage>Your cart is empty</EmptyMessage>
       )}
     </CartItemsContainer>
     <CartDropdownButton
