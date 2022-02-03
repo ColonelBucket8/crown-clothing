@@ -1,6 +1,7 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/auth";
+import { CollectionsOverviewContainer } from "../components/collections-overview/collections-overview.styles";
 
 const config = {
   apiKey: "AIzaSyCbJ2C5-Hh7mW1kjvF0nvI3rk8uznFURkw",
@@ -49,6 +50,22 @@ export const addCollectionAndDocuments = async (
     batch.set(newDocRef, obj);
   });
   return await batch.commit();
+};
+
+export const convertCollectionsSnapshotToMap = (collectionSnapshot) => {
+  const transformedCollection = collectionSnapshot.docs.map((doc) => {
+    const { title, items } = doc.data();
+    return {
+      routeName: encodeURI(title.toLowerCase()),
+      id: doc.id,
+      title,
+      items,
+    };
+  });
+  return transformedCollection.reduce((accumulator, collection) => {
+    accumulator[collection.title.toLowerCase()] = collection;
+    return accumulator;
+  }, {});
 };
 
 export const auth = firebase.auth();
