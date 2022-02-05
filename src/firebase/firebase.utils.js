@@ -1,7 +1,6 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/auth";
-import { CollectionsOverviewContainer } from "../components/collections-overview/collections-overview.styles";
 
 const config = {
   apiKey: "AIzaSyCbJ2C5-Hh7mW1kjvF0nvI3rk8uznFURkw",
