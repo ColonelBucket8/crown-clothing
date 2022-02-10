@@ -8,11 +8,10 @@ import CollectionPageContainer from "../collection/collection.container";
 
 const ShopPage = ({ match }) => {
   const dispatch = useDispatch();
-  const fetchCollectionsStartHandler = () => dispatch(fetchCollectionsStart());
 
   useEffect(() => {
-    fetchCollectionsStartHandler();
-  }, [fetchCollectionsStartHandler]);
+    dispatch(fetchCollectionsStart());
+  }, [dispatch]);
 
   return (
     <div className="shop-page">
