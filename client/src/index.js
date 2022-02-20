@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { store, persistor } from "./redux/store";
-import * as serviceWorker from "./service-worker";
+import * as serviceWorker from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
