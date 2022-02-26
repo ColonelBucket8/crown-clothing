@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CartItem component 1`] = `
+<styled.div>
+  <styled.img
+    alt="item"
+  />
+  <styled.div>
+    <styled.span />
+    <styled.span>
+       x $
+    </styled.span>
+  </styled.div>
+</styled.div>
+`;
