@@ -14,11 +14,13 @@ export const TitleContainer = styled.h1`
 `;
 
 export const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
   width: 100%;
 `;
 
 export const Image = styled.img`
-  width: 200px;
-  height: 100px;
+  width: 30%;
+  height: 30%;
   border-radius: 10px;
 `;
