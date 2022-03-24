@@ -14,7 +14,7 @@ export const ErrorImageContainer = styled.div`
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
   background-size: cover;
   background-position: center;
-  width: 40vh;
+  width: 40vw;
   height: 40vh;
 `;
 
